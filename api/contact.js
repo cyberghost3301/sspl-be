@@ -41,7 +41,7 @@ module.exports = async (req, res) => {
                 from: `"${process.env.EMAIL_FROM_NAME}" <${process.env.EMAIL_FROM_ADDRESS}>`,
                 // 'to' field uses an environment variable for the recipient email
                 to: process.env.EMAIL_RECEIVER,
-                subject: `New Client Query ${subject} from ${name}`,
+                subject: `SSPL client query: ${subject}`,
                 html: `
                     <p><strong>Name:</strong> ${name}</p>
                     <p><strong>Email:</strong> ${email}</p>
