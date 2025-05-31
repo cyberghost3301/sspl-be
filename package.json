@@ -1,18 +1,19 @@
+// sspl-be/package.json
 {
-  "name": "backend",
+  "name": "sspl-be",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for SSPL website",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.3"
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
   }
 }
