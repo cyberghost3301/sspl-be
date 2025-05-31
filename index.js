@@ -47,9 +47,9 @@ app.post('/api/contact', async (req, res) => {
     try {
         // What email should be sent:
         let mailOptions = {
-            // CORRECTED: Ensure this line uses backticks (`) for the template literal
-            // and no extra span/math-inline tags.
-            from: `"<span class="math-inline">\{process\.env\.EMAIL\_FROM\_NAME\}" <</span>{process.env.EMAIL_FROM_ADDRESS}>`,
+            // CORRECTED: This line must use backticks (`) for the template literal
+            // and be free of any extra HTML/Markdown characters like <span>
+            from: `"${process.env.EMAIL_FROM_NAME}" <${process.env.EMAIL_FROM_ADDRESS}>`,
             to: process.env.EMAIL_RECEIVER, // Will be set on Render dashboard
             subject: `New Client Query ${subject} from ${name}`, // Subject line for the email you receive
             html: `
